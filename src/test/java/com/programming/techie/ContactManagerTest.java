@@ -42,7 +42,7 @@ class ContactManagerTest {
     public void shouldThrowRuntimeExceptionWhenPhoneNumberIsNull() {
         ContactManager contactManager = new ContactManager();
         Assertions.assertThrows(RuntimeException.class, () -> {
-            contactManager.addContact("John", "Doe", "0123456789");
+            contactManager.addContact("John", "Doe", "null");
         });
     }
 
