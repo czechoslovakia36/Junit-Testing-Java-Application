@@ -24,3 +24,11 @@ Starter Project for the Junit 5 Tutorial
 
 <p><b>assumption class:</b>failed assumptions do not result in a test failure; rather, a failed assumption results in a test being aborted.</p>
 
+
+<h3>Parameterized tests</h2>
+<ul>
+<li>Test are executed with different set of input</li>
+<li>substitutes @test</li>
+<li>data is provided using different annotations</li>
+@valueSource, @CsvSouce etc.
+</ul>

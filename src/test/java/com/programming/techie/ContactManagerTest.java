@@ -103,12 +103,26 @@ class ContactManagerTest {
     @Test
     @DisplayName("Test Contact Creation on Developer Machine")
     public void shoudlTestContactCreationOnDEV(){
-        Assumptions.assumeTrue("TEST".equals(System.getProperty("ENV")));
+        Assumptions.assumeTrue("DEV".equals(System.getProperty("ENV")));
         contactManager.addContact("John", "Doe", "0123456789");
         Assertions.assertFalse(contactManager.getAllContacts().isEmpty());
         Assertions.assertEquals(1, contactManager.getAllContacts().size());
 
     }
+
+
+    @DisplayName("Repeat Creation Test 5 Times")
+    @RepeatedTest(value = 5,
+    name = "Repeating contact creation test {currentRepetition} of {totalRepetitions}"
+    )
+    public void shouldTestContactCreationRepeatedly(){
+        contactManager.addContact("John","Doe","0123456789");
+        assertFalse(contactManager.getAllContacts().isEmpty());
+        assertEquals(1,contactManager.getAllContacts().size());
+    }
+
+
+
 
 
 
