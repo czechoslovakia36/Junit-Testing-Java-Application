@@ -18,3 +18,7 @@ Starter Project for the Junit 5 Tutorial
 <p>@AfterAll , @AfterEach - used to perform cleanup tasks for tests</p>
 
 
+<hr>
+
+<p><b>assertion: means what is the expected value</b></p>
+
