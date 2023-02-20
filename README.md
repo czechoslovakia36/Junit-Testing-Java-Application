@@ -20,5 +20,7 @@ Starter Project for the Junit 5 Tutorial
 
 <hr>
 
-<p><b>assertion: means what is the expected value</b></p>
+<p><b>assertion:</b> means what is the expected value</p>
+
+<p><b>assumption class:</b>failed assumptions do not result in a test failure; rather, a failed assumption results in a test being aborted.</p>
 
