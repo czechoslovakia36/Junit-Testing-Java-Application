@@ -4,6 +4,8 @@ import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.condition.EnabledOnJre;
 import org.junit.jupiter.api.condition.EnabledOnOs;
 import org.junit.jupiter.api.condition.OS;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 class ContactManagerTest {
@@ -117,6 +119,16 @@ class ContactManagerTest {
     )
     public void shouldTestContactCreationRepeatedly(){
         contactManager.addContact("John","Doe","0123456789");
+        assertFalse(contactManager.getAllContacts().isEmpty());
+        assertEquals(1,contactManager.getAllContacts().size());
+    }
+
+
+    @DisplayName("Repeat contact creation test 5 times")
+    @ParameterizedTest
+    @ValueSource(strings = {"0917474191","0917454191","0917404191","0917494191","0917424191"})
+    public void shouldTestContactCreationsUsingValueSource(String phoneNumber){
+        contactManager.addContact("John","Doe",phoneNumber);
         assertFalse(contactManager.getAllContacts().isEmpty());
         assertEquals(1,contactManager.getAllContacts().size());
     }
