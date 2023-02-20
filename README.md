@@ -32,3 +32,12 @@ Starter Project for the Junit 5 Tutorial
 <li>data is provided using different annotations</li>
 @valueSource, @CsvSouce etc.
 </ul>
+
+<h1>nested tests</h1>
+<ol>
+<li>used to group tests together into a logical group</li>
+<li>makes the test class more organized</li>
+<li>@nested used to top of the class</li>
+<li>can only use @BeforeEach and @AfterEach </li>
+<li>Cannot use @BeforeAll and @AfterAll by default</li>
+</ol>
